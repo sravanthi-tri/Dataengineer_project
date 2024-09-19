@@ -26,11 +26,11 @@ today_string = current_time_Est.strftime('%Y_%m_%d')
 # Following credential has to come using secret whie running in automated way
 def snowpark_basic_auth() -> Session:
     connection_parameters = {
-       "ACCOUNT":"<your-account>",
-       "region":"<your-region>",
-        "USER":"<your-user>",
-        "PASSWORD":"<your-password>",
-        "ROLE":"SYSADMIN",
+        "ACCOUNT":"LCB94246",
+       "region":"AWS_US_EAST_1",
+        "USER":"SRAVANTHI",
+        "PASSWORD":"Mahira@2023",
+        "ROLE":"ACCOUNTADMIN",
         "DATABASE":"dev_db",
         "SCHEMA":"stage_sch",
         "WAREHOUSE":"load_wh"
@@ -40,7 +40,7 @@ def snowpark_basic_auth() -> Session:
 
 
 def get_air_quality_data(api_key, limit):
-    api_url = 'https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69'
+    api_url = 'https://api.data.gov.in/resource/579b464db66ec23bdd0000018a8b26602608454c71129836ae42efc8'
     
     # Parameters for the API request
     params = {
@@ -107,7 +107,7 @@ def get_air_quality_data(api_key, limit):
     return None
 
 # Replace 'YOUR_API_KEY' with your actual API key
-api_key = '<add-app-api-key>'
+api_key = '579b464db66ec23bdd0000018a8b26602608454c71129836ae42efc8'
 
 
 limit_value = 4000
