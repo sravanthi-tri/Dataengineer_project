@@ -26,7 +26,7 @@ today_string = current_time_ist.strftime('%Y_%m_%d')
 # Create the file name
 file_name = f'air_quality_data_{timestamp}.json'
 
-today_string = current_time_Est.strftime('%Y_%m_%d')
+today_string = current_time_Ist.strftime('%Y_%m_%d')
 
 # Following credential has to come using secret whie running in automated way
 def snowpark_basic_auth() -> Session:
