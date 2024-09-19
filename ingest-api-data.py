@@ -9,14 +9,19 @@ import logging
 # initiate logging at info level
 logging.basicConfig(stream=sys.stdout, level=logging.INFO, format='%(levelname)s - %(message)s')
 
-# Set the EST time zone
-ist_timezone = pytz.timezone('Miami/florida')
+# Set the IST time zone
+ist_timezone = pytz.timezone('Asia/Kolkata')
 
-# Get the current time in EST
-current_time_Est = datetime.now(Est_timezone)
+# Get the current time in IST
+current_time_ist = datetime.now(ist_timezone)
 
 # Format the timestamp
-timestamp = current_time_Est.strftime('%Y_%m_%d_%H_%M_%S')
+timestamp = current_time_ist.strftime('%Y_%m_%d_%H_%M_%S')
+
+# Create the file name
+file_name = f'air_quality_data_{timestamp}.json'
+
+today_string = current_time_ist.strftime('%Y_%m_%d')
 
 # Create the file name
 file_name = f'air_quality_data_{timestamp}.json'
